@@ -1,0 +1,18 @@
+  /*ADC RJY P B SUBRAHMANYAM*/
+/*create a new file oppression */
+
+int main() {
+    char ch[100];
+
+    FILE *fptr;
+    fptr = fopen("program.txt", "w");
+    if (fptr == NULL) {
+        printf("Error!");
+        exit(1);
+    }
+    printf("Enter a sentence:\n");
+    fgets(ch, sizeof(ch), stdin);
+    fprintf(fptr, "%s", ch);
+    fclose(fptr);
+    return 0;
+}
